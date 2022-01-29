@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: terraform-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: terraform-dev
+    volumes:
+      - ~/git/github/dev_terraform:/var/www/dev_terraform/:delegated
+    tty: true
